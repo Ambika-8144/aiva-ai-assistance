@@ -1,151 +1,223 @@
-<img src="./assets/web-ui.png" alt="Browser Use Web UI" width="full"/>
+# 🚀 AIVA - AI Virtual Assistant
 
-<br/>
+<p align="center">
+  <img src="screenshots/home.png" alt="AIVA Banner" width="800">
+</p>
 
-[![GitHub stars](https://img.shields.io/github/stars/browser-use/web-ui?style=social)](https://github.com/browser-use/web-ui/stargazers)
-[![Discord](https://img.shields.io/discord/1303749220842340412?color=7289DA&label=Discord&logo=discord&logoColor=white)](https://link.browser-use.com/discord)
-[![Documentation](https://img.shields.io/badge/Documentation-📕-blue)](https://docs.browser-use.com)
-[![WarmShao](https://img.shields.io/twitter/follow/warmshao?style=social)](https://x.com/warmshao)
+<p align="center">
+  <b>An AI-Powered Virtual Assistant built with modern LLM technologies, intelligent workflows, and automation capabilities.</b>
+</p>
 
-This project builds upon the foundation of the [browser-use](https://github.com/browser-use/browser-use), which is designed to make websites accessible for AI agents.
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.11-blue?style=for-the-badge">
+  <img src="https://img.shields.io/badge/AI-LLM-green?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Streamlit-WebApp-red?style=for-the-badge">
+  <img src="https://img.shields.io/badge/GitHub-Portfolio-black?style=for-the-badge">
+</p>
 
-We would like to officially thank [WarmShao](https://github.com/warmshao) for his contribution to this project.
+---
 
-**WebUI:** is built on Gradio and supports most of `browser-use` functionalities. This UI is designed to be user-friendly and enables easy interaction with the browser agent.
+# 📖 Overview
 
-**Expanded LLM Support:** We've integrated support for various Large Language Models (LLMs), including: Google, OpenAI, Azure OpenAI, Anthropic, DeepSeek, Ollama etc. And we plan to add support for even more models in the future.
+AIVA (AI Virtual Assistant) is an intelligent assistant designed to provide AI-powered interactions, automation, and smart assistance through modern Large Language Models (LLMs).
 
-**Custom Browser Support:** You can use your own browser with our tool, eliminating the need to re-login to sites or deal with other authentication challenges. This feature also supports high-definition screen recording.
+The project combines powerful AI capabilities with a user-friendly interface to create an interactive assistant capable of understanding user queries and generating intelligent responses.
 
-**Persistent Browser Sessions:** You can choose to keep the browser window open between AI tasks, allowing you to see the complete history and state of AI interactions.
+---
 
-<video src="https://github.com/user-attachments/assets/56bc7080-f2e3-4367-af22-6bf2245ff6cb" controls="controls">Your browser does not support playing this video!</video>
+# ✨ Features
 
-## Installation Guide
+✅ AI-Powered Conversations
 
-### Option 1: Local Installation
+✅ Intelligent Query Processing
 
-Read the [quickstart guide](https://docs.browser-use.com/quickstart#prepare-the-environment) or follow the steps below to get started.
+✅ Modern LLM Integration
 
-#### Step 1: Clone the Repository
-```bash
-git clone https://github.com/browser-use/web-ui.git
-cd web-ui
+✅ Interactive User Interface
+
+✅ Research & Information Assistance
+
+✅ Extensible Architecture
+
+✅ Local Development Support
+
+✅ Easy Deployment
+
+---
+
+# 🏗️ Project Architecture
+
+```text
+User
+  │
+  ▼
+AIVA Interface
+  │
+  ▼
+Request Processing
+  │
+  ▼
+LLM Integration Layer
+  │
+  ▼
+Response Generation
+  │
+  ▼
+User Output
 ```
 
-#### Step 2: Set Up Python Environment
-We recommend using [uv](https://docs.astral.sh/uv/) for managing the Python environment.
+---
 
-Using uv (recommended):
-```bash
-uv venv --python 3.11
+# 🛠️ Tech Stack
+
+### Programming Language
+
+* Python
+
+### Frontend/UI
+
+* Streamlit
+
+### AI & LLM
+
+* Ollama
+* Large Language Models (LLMs)
+
+### Development Tools
+
+* Git
+* GitHub
+* VS Code
+
+### Deployment
+
+* Local Environment
+* Docker Support
+
+---
+
+# 📂 Project Structure
+
+```text
+AIVA/
+│
+├── assets/
+├── src/
+├── tests/
+├── screenshots/
+├── requirements.txt
+├── webui.py
+├── Dockerfile
+└── README.md
 ```
 
-Activate the virtual environment:
-- Windows (Command Prompt):
-```cmd
+---
+
+# ⚙️ Installation
+
+### Clone Repository
+
+```bash
+git clone https://github.com/your-username/aiva-ai-assistant.git
+cd aiva-ai-assistant
+```
+
+### Create Virtual Environment
+
+```bash
+python -m venv .venv
+```
+
+### Activate Environment
+
+Windows:
+
+```bash
 .venv\Scripts\activate
 ```
-- Windows (PowerShell):
-```powershell
-.\.venv\Scripts\Activate.ps1
-```
-- macOS/Linux:
+
+### Install Dependencies
+
 ```bash
-source .venv/bin/activate
+pip install -r requirements.txt
 ```
 
-#### Step 3: Install Dependencies
-Install Python packages:
+### Run Application
+
 ```bash
-uv pip install -r requirements.txt
+python webui.py
 ```
 
-Install Browsers in playwright. 
+or
+
 ```bash
-playwright install --with-deps
-```
-Or you can install specific browsers by running:
-```bash
-playwright install chromium --with-deps
+streamlit run webui.py
 ```
 
-#### Step 4: Configure Environment
-1. Create a copy of the example environment file:
-- Windows (Command Prompt):
-```bash
-copy .env.example .env
-```
-- macOS/Linux/Windows (PowerShell):
-```bash
-cp .env.example .env
-```
-2. Open `.env` in your preferred text editor and add your API keys and other settings
+---
 
-#### Step 5: Enjoy the web-ui
-1.  **Run the WebUI:**
-    ```bash
-    python webui.py --ip 127.0.0.1 --port 7788
-    ```
-2. **Access the WebUI:** Open your web browser and navigate to `http://127.0.0.1:7788`.
-3. **Using Your Own Browser(Optional):**
-    - Set `BROWSER_PATH` to the executable path of your browser and `BROWSER_USER_DATA` to the user data directory of your browser. Leave `BROWSER_USER_DATA` empty if you want to use local user data.
-      - Windows
-        ```env
-         BROWSER_PATH="C:\Program Files\Google\Chrome\Application\chrome.exe"
-         BROWSER_USER_DATA="C:\Users\YourUsername\AppData\Local\Google\Chrome\User Data"
-        ```
-        > Note: Replace `YourUsername` with your actual Windows username for Windows systems.
-      - Mac
-        ```env
-         BROWSER_PATH="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
-         BROWSER_USER_DATA="/Users/YourUsername/Library/Application Support/Google/Chrome"
-        ```
-    - Close all Chrome windows
-    - Open the WebUI in a non-Chrome browser, such as Firefox or Edge. This is important because the persistent browser context will use the Chrome data when running the agent.
-    - Check the "Use Own Browser" option within the Browser Settings.
+# 📸 Screenshots
 
-### Option 2: Docker Installation
+## Home Page
 
-#### Prerequisites
-- Docker and Docker Compose installed
-  - [Docker Desktop](https://www.docker.com/products/docker-desktop/) (For Windows/macOS)
-  - [Docker Engine](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/) (For Linux)
+<img width="1920" height="1080" alt="Screenshot 2026-06-09 165558" src="https://github.com/user-attachments/assets/a28fcc46-ca48-441d-a332-a399a73e7ba3" />
 
-#### Step 1: Clone the Repository
-```bash
-git clone https://github.com/browser-use/web-ui.git
-cd web-ui
-```
 
-#### Step 2: Configure Environment
-1. Create a copy of the example environment file:
-- Windows (Command Prompt):
-```bash
-copy .env.example .env
-```
-- macOS/Linux/Windows (PowerShell):
-```bash
-cp .env.example .env
-```
-2. Open `.env` in your preferred text editor and add your API keys and other settings
+## Assistant Interface
 
-#### Step 3: Docker Build and Run
-```bash
-docker compose up --build
-```
-For ARM64 systems (e.g., Apple Silicon Macs), please run follow command:
-```bash
-TARGETPLATFORM=linux/arm64 docker compose up --build
-```
+<img width="1920" height="1080" alt="Screenshot 2026-06-09 165648" src="https://github.com/user-attachments/assets/f9990f2f-906f-40e1-8285-16edefaed094" />
+<img width="1920" height="1080" alt="Screenshot 2026-06-09 165750" src="https://github.com/user-attachments/assets/1ee5b20e-e319-49d6-9c43-f5591ce22680" />
+<img width="1920" height="1080" alt="Screenshot 2026-06-09 165817" src="https://github.com/user-attachments/assets/ec56a7ba-27fb-47ca-b1fb-1264f0a6dc6e" />
 
-#### Step 4: Enjoy the web-ui and vnc
-- Web-UI: Open `http://localhost:7788` in your browser
-- VNC Viewer (for watching browser interactions): Open `http://localhost:6080/vnc.html`
-  - Default VNC password: "youvncpassword"
-  - Can be changed by setting `VNC_PASSWORD` in your `.env` file
 
-## Changelog
-- [x] **2025/01/26:** Thanks to @vvincent1234. Now browser-use-webui can combine with DeepSeek-r1 to engage in deep thinking!
-- [x] **2025/01/10:** Thanks to @casistack. Now we have Docker Setup option and also Support keep browser open between tasks.[Video tutorial demo](https://github.com/browser-use/web-ui/issues/1#issuecomment-2582511750).
-- [x] **2025/01/06:** Thanks to @richard-devbot. A New and Well-Designed WebUI is released. [Video tutorial demo](https://github.com/warmshao/browser-use-webui/issues/1#issuecomment-2573393113).
+## AI Response
+
+<img width="1920" height="1080" alt="Screenshot 2026-06-09 165853" src="https://github.com/user-attachments/assets/47fb435c-eaf6-4d1a-baa9-e01e5fd8e850" />
+<img width="1920" height="1080" alt="Screenshot 2026-06-09 165913" src="https://github.com/user-attachments/assets/ccf6ed66-07f3-4d7d-8fe3-15c1636703d3" />
+<img width="1920" height="1080" alt="Screenshot 2026-06-09 165929" src="https://github.com/user-attachments/assets/a8b77465-dec7-4e41-b8a5-5288496cd503" />
+<img width="1920" height="1080" alt="Screenshot 2026-06-09 170053" src="https://github.com/user-attachments/assets/36941a6d-dd87-4a19-9d49-49698c808885" />
+<img width="1920" height="1080" alt="Screenshot 2026-06-09 170112" src="https://github.com/user-attachments/assets/535b262d-0b57-48ce-be8b-be45101674d9" />
+
+
+---
+
+
+
+# 🚀 Future Enhancements
+
+* Voice Assistant Integration
+* Multi-Agent Workflows
+* Advanced Memory Features
+* Document Analysis
+* Real-Time Web Search
+* Personalized AI Assistance
+
+---
+
+# 👨‍💻 Author
+
+### Anu
+
+B.Tech – Artificial Intelligence & Data Science
+
+Passionate about Artificial Intelligence, Machine Learning, Data Science, and Intelligent Systems.
+
+Developed and customized AIVA with modern AI technologies, intelligent workflows, and enhanced user experience.
+
+---
+
+# ⭐ Support
+
+If you found this project useful:
+
+⭐ Star the repository
+
+🍴 Fork the repository
+
+💡 Share feedback and suggestions
+
+---
+
+# 📜 License
+
+This project is intended for educational, research, and portfolio purposes.
