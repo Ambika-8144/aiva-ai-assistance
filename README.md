@@ -221,3 +221,15 @@ If you found this project useful:
 # 📜 License
 
 This project is intended for educational, research, and portfolio purposes.
+
+---
+
+#Author
+
+P. Ambika
+
+B.E. Artificial Intelligence & Data Science
+
+Chaitanya Bharathi Institute of Technology (CBIT), Hyderabad
+
+GitHub: https://github.com/Ambika-8144
