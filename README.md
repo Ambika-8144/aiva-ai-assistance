@@ -224,7 +224,7 @@ This project is intended for educational, research, and portfolio purposes.
 
 ---
 
-#Author
+# Author
 
 P. Ambika
 
